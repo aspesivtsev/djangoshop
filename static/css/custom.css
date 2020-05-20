@@ -1,0 +1,21 @@
+.nav-item {
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: indigo;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: indigo;
+}
+
+.navbar-brand {
+    font-size: 16px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: indigo !IMPORTANT;
+}
+
