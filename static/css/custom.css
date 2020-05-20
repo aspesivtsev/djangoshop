@@ -19,3 +19,18 @@
     color: indigo !IMPORTANT;
 }
 
+/**Category Page **/
+.my_row_class {
+    padding-top: 15px;
+}
+
+.my_row_class .mx-auto p {
+    color: #000;
+    font-size: 12px;
+}
+
+.my_row_class .mx-auto p a {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}

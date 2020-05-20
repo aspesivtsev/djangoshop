@@ -5,7 +5,7 @@
     {% if category %}
         {{ category.description|truncatewords:155 }}
     {% else %}
-        Whelcome to the cushion store!
+        Welcome to the cushion store!
     {% endif %}
 {% endblock %}
 
@@ -19,17 +19,17 @@
 
 {% block content %}
     {% if category %}
-        <div>
-            <div>
+        <div class="row my_row_class">
+            <div class="mx-auto">
                 <p><a href="{% url 'shop:allProdCat' %}">Our porduct collection</a> | {{ category.name }}</p>
+                
             </div>
         </div>
-
     {% endif %}
 
     <div>
     {% if category %}
-        <img src="{{ category.img.url }}" alt="{{ category.name }}">
+        <img src="{{ category.image.url }}" alt="{{ category.name }}">
     </div>
         <br />
         <div>

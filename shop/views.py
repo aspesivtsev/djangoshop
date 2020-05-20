@@ -10,14 +10,16 @@ def allProdCat(request, c_slug = None):
         products = Product.objects.filter(category = c_page, available = True)
     else:
         products = Product.objects.all().filter(available = True)
-    context = {'catergory':c_page, 'products':products}
-    print (context)
+        #print("Chlenososanie")
+    context = {'category':c_page, 'products':products}
+    #print (context)
     return render (request, 'shop/category.html', context)
+
 
 def ProdCatDetail(request, c_slug, product_slug):
     try:
         product = Product.objects.get(category__slug=c_slug, slug=product_slug)
-    except Esception as e:
+    except Exception as e:
         raise e
     context = {'product':product}
     return render (request, 'shop/product.html', context)
