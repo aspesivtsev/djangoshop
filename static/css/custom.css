@@ -1,23 +1,35 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
 .nav-item {
     font-size: 14px;
     letter-spacing: .2em;
     text-transform: uppercase;
-    color: indigo;
+    color: navy !IMPORTANT;
 }
 
 .dropdown-item {
     font-size: 14px;
     letter-spacing: .2em;
     text-transform: uppercase;
-    color: indigo;
+    color: navy !IMPORTANT;
 }
 
 .navbar-brand {
     font-size: 16px;
     letter-spacing: .2em;
     text-transform: uppercase;
-    color: indigo !IMPORTANT;
+    color: navy !IMPORTANT;
 }
+
+.nav-link{
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: navy !IMPORTANT;
+}
+
 
 /**Category Page **/
 .my_row_class {
@@ -33,4 +45,57 @@
     color: #000;
     font-size: 12px;
     text-decoration: none;
+}
+
+.my_image {
+    width: 100%;
+    height: auto;
+}
+
+.my_title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #F012BE;
+}
+.my_image_padding {
+    padding-top: 5px;
+}
+.my_bottom_margin {
+    margin-bottom: 10px;
+    
+}
+.card-body h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+.card-body h4 a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+/***Product Page ***/
+.my_prod_row_class {
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.my_prod_row_class .mx-auto p {
+    color: #000;
+    font-size: 12px;
+}
+.my_prod_row_class .mx-auto p a {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+}
+.my_prod_title {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+.my_prod_text {
+    padding-right: 20px;
 }

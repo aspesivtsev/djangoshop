@@ -27,40 +27,51 @@
         </div>
     {% endif %}
 
-    <div>
+    <div class="mx-auto">
     {% if category %}
-        <img src="{{ category.image.url }}" alt="{{ category.name }}">
+        <img class="my_image" src="{{ category.image.url }}" alt="{{ category.name }}">
     </div>
         <br />
         <div>
-            <h1>{{ category.name  }}</h1>
-            <p>{{ category.description }}</p>
+            <h1 class="text-center my_title">{{ category.name  }}</h1>
+            <p class="text-justify">{{ category.description }}</p>
         </div>
     {% else %}
         <div>
-            <img src="{% static '/img/banner.jpg' %}" alt="Our Products Collection">
+            <img class="my_image my_image_padding" src="{% static '/img/banner.jpg' %}" alt="Our Products Collection">
         </div>
         <br />
         <div>
-            <h1>Our Products Collection</h1>
-            <p>This is a custom description of the products...</p>
+            <h1 class="text-center my_title">Our Products Collection</h1>
+            <p class="text-justify">Lacus sed turpis tincidunt id aliquet risus feugiat in ante. Dolor purus non enim praesent. Risus sed vulputate odio ut enim blandit volutpat. Ultrices in iaculis nunc sed. Facilisis magna etiam tempor orci eu lobortis elementum nibh tellus. Diam ut venenatis tellus in. Ornare arcu odio ut sem nulla pharetra diam sit amet. Sed arcu non odio euismod lacinia at quis risus. In massa tempor nec feugiat nisl pretium fusce. Risus quis varius quam quisque id diam vel. </p>
         </div>
 
     {% endif %}
 
-    <div>
-        <div>
-            {% for product in products %}
-                <div>
-                    <div>
-                        <a href="{{ product.get_url }}" alt="{{ product.name }}"><img src="{{ product.image.url }}"></a>
-                        <div>
-                            <h4>{{ product.name }}</h4>
+    <div class="container">
+        <div class="row mx-auto">
+            {% for product in products.object_list %}
+                <div class="my_bottom_margin col-sm-12  col-md-6 col-lg-4">
+                    <div class="card text-center" style="min-width: 18rem;">
+                        <a href="{{ product.get_url }}" alt="{{ product.name }}"><img class="card-img-top my_image" src="{{ product.image.url }}"></a>
+                        <div class="card-body">
+                            <h4><a href="{{ product.get_url }}">{{ product.name }}</a></h4>
                             <p>$ {{ product.price }}</p>
                         </div>
                     </div>
                 </div>
             {% endfor %}
+        </div>
+        <div class="mx-auto">
+            {% if products.paginator.num_pages > 1 %}
+            <hr>
+            <div class="text-center">
+                {% for pg in products.paginator.page_range %}
+                    <a href="?page={{pg}}" class="btn btn-light btn-sm {% if products.number == pg %}active{% endif%}">{{pg}}</a>
+                {% endfor%}
+            </div>
+            {% endif %}
+            <br />
         </div>
     </div>
 

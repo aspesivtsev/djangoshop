@@ -10,12 +10,10 @@ admin.site.register(Category, CategoryAdmin)
 #admin.site.register(Product)
 
 class ProductAdmin(admin.ModelAdmin):
-    #list_display_links = ['name']
     list_display = ['name', 'price', 'stock', 'category', 'available', 'created', 'updated']
     list_editable = ['price', 'stock', 'category', 'available']
-    list_filter = ['name', 'price', 'stock', 'available', 'created', 'updated']
+    #list_filter = ['name', 'price', 'stock', 'available', 'created', 'updated'] # left filters in admin page
     search_fields = ['name', ]
-    #raw_id_fields = ('category',)
     prepopulated_fields = {'slug':('name',)}
     list_per_page = 20
 
