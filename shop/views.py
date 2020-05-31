@@ -5,6 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, InvalidPage
 def allProdCat(request, c_slug = None):
     c_page = None
     products_list = None
+    
     if c_slug != None:
         c_page = get_object_or_404(Category, slug = c_slug)
         products_list = Product.objects.filter(category = c_page, available = True)
@@ -15,6 +16,7 @@ def allProdCat(request, c_slug = None):
     paginator = Paginator(products_list, 6)
     try:
         page = int(request.GET.get('page', '1'))
+        #It means if the url of the GET request has 'page' parameter, get it. If it does not, return 1 by default. So if the url has ?page=9 the page variable will be equal to 9. If it does not, the page variable will be equal to 1.
     except:
         page = 1
     try:

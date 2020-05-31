@@ -59,7 +59,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'shop', 'templates','shop/'), 
-            os.path.join(BASE_DIR, 'search_app', 'templates', 'search_app/')],
+            os.path.join(BASE_DIR, 'search_app', 'templates', 'search_app/'),
+            os.path.join(BASE_DIR, 'cart', 'templates', 'cart/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.menu_links',
+                'cart.context_processors.counter',
             ],
         },
     },
