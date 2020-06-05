@@ -56,7 +56,7 @@ body {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: .2em;
-    color: #F012BE;
+    color: #000;
 }
 .my_image_padding {
     padding-top: 5px;
@@ -125,6 +125,12 @@ body {
 .custom_icon{
     text-decoration: none;
     color: #868e96 !important;
+
+}
+.custom_icon:hover{
+    color: black !important;
+
+
 }
 .my_custom_button{
     margin-top: 5px;
